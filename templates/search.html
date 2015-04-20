@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Search</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+
+
+{% block body %}
+
+ 
+
+</form>
+
+<form action="{{ url_for('search') }}" method=post>
+
+  <div class="form-group">
+    <label for="Query">Query</label>
+    <input type="text" class="form-control" id="Query" name="Query" placeholder="Enter keywords">
+  </div>
+</form>
+
+<form action="{{ url_for('search') }}" method=post class= "form-inline" >
+  <div class="form-group">
+    <label for="fromDate">From: </label>
+    <input type="date" class="form-control" id="fromDate" name="fromDate" placeholder="mm-dd-yy">
+  </div>
+  <div class="form-group">
+    <label for="toDate">To: </label>
+    <input type="date" class="form-control" id="toDate" name="toDate" placeholder="mm-dd-yy">
+  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+  
+{% endblock %}
+
+
+</body>
+</html>
